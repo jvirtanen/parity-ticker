@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  src: url('fonts/SourceSansPro-Regular.otf.woff');
+}
+
+html {
+  background: #fbfbfb;
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1em normal "Source Sans Pro", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background: url('images/logo@2x.png') 0 50%/64px no-repeat;
+  color: #66cc99;
+  font-size: 24px;
+  font-weight: normal;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 0 0 19px;
+  padding: 26px 0 26px 64px;
+}
+
+#container {
+  margin: 4em auto;
+  padding: 0;
+  width: 55em;
+}
+
+.instruments {
+  margin: 0 32px;
+  padding: 0;
+}
+
+td, th {
+  margin: 0;
+  padding: 0 2em 0 0;
+}
+
+th {
+  color: #333;
+  font-weight: normal;
+}
+
+.numeric {
+  text-align: right;
+}
