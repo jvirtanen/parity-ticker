@@ -3,7 +3,7 @@
   "version": "0.1.0-SNAPSHOT",
   "description": "Parity Stock Ticker",
   "license": "Apache-2.0",
-  "repository": "jvirtanen/parity-ticker",
+  "repository": "paritytrading/parity-ticker",
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch"
