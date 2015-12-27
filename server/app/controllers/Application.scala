@@ -1,7 +1,6 @@
 package controllers
 
 import akka.actor.Props
-import java.net.InetSocketAddress
 import play.api.Play.current
 import play.api.libs.concurrent.Akka
 import play.api.libs.json.JsValue
