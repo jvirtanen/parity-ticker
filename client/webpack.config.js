@@ -13,9 +13,6 @@ module.exports = {
       {
         test: /\.jsx$/,
         loader: 'babel-loader',
-        include: [
-          __dirname + '/app'
-        ],
         query: {
           plugins: [
             'syntax-jsx',
