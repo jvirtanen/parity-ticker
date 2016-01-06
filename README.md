@@ -6,6 +6,8 @@ and offers (BBOs) and latest trades in [Parity Trading System][].
 
   [Parity Trading System]: https://github.com/jvirtanen/parity
 
+![Screenshot](screenshot.png)
+
 
 Build
 -----
