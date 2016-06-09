@@ -1,10 +1,10 @@
 package controllers
 
 import akka.actor.{Actor, ActorRef}
+import com.paritytrading.foundation.ASCII
 import com.typesafe.config.Config
 import java.net.InetSocketAddress
 import org.jvirtanen.config.Configs
-import org.jvirtanen.lang.Strings
 import org.jvirtanen.parity.net.pmd.{PMD, PMDListener, PMDParser}
 import org.jvirtanen.parity.top.{Market, MarketListener, Side}
 import org.jvirtanen.parity.util.MoldUDP64
@@ -44,7 +44,7 @@ class MarketDataReceiver(config: Config, publisher: ActorRef) extends Runnable {
 
       override def bbo(instrument: Long, bidPrice: Long, bidSize: Long, askPrice: Long, askSize: Long) {
         publisher ! BBO(
-          instrument = Strings.decodeLong(instrument).trim,
+          instrument = ASCII.unpackLong(instrument).trim,
           bidPrice   = bidPrice / PriceFactor,
           bidSize    = bidSize,
           askPrice   = askPrice / PriceFactor,
@@ -54,7 +54,7 @@ class MarketDataReceiver(config: Config, publisher: ActorRef) extends Runnable {
 
       override def trade(instrument: Long, side: Side, price: Long, size: Long) {
         publisher ! Trade(
-          instrument = Strings.decodeLong(instrument).trim,
+          instrument = ASCII.unpackLong(instrument).trim,
           price      = price / PriceFactor,
           size       = size
         )
@@ -63,7 +63,7 @@ class MarketDataReceiver(config: Config, publisher: ActorRef) extends Runnable {
     })
 
     config.getStringList("instruments").asScala.foreach { instrument => 
-      market.open(Strings.encodeLong(instrument))
+      market.open(ASCII.packLong(instrument))
     }
 
     MoldUDP64.receive(
