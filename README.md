@@ -4,7 +4,7 @@ Parity Stock Ticker
 Parity Stock Ticker is a simple web application that displays the best bids
 and offers (BBOs) and latest trades in [Parity Trading System][].
 
-  [Parity Trading System]: https://github.com/jvirtanen/parity
+  [Parity Trading System]: https://github.com/paritytrading/parity
 
 ![Screenshot](screenshot.png)
 
