@@ -9,7 +9,7 @@
     "watch": "webpack --watch"
   },
   "dependencies": {
-    "jquery": "^1",
+    "jquery": "^3",
     "react": "^0.14",
     "react-dom": "^0.14"
   },
